@@ -15,24 +15,24 @@ app.get(function (request, response,next) {
 app.get(/\/(index.html|index|home|main|index.php)/gi, function (request, response) {
     response.redirect("/")
 });
-app.get(/\/(contact(.html)?\/?|contact(\/)?)/gi, function (request, response) {
+app.get(/\/(contact.html|contact\/)/gi, function (request, response) {
     response.redirect("/contact")
 });
-app.get(/\/(about(.html)?\/?|about(\/)?)/gi, function (request, response) {
+app.get(/\/(about.html|about\/)/gi, function (request, response) {
     response.redirect("/about")
 });
 
 app.get("/", function (request, response) {
-    response.sendFile(__dirname + "/index.html")
+    response.sendFile(__dirname + "/app3/index.html")
 });
 app.get("/contact", function (request, response) {
-    response.sendFile(__dirname + "/contact.html")
+    response.sendFile(__dirname + "/app3/contact.html")
 });
 app.get("/about", function (request, response) {
-    response.sendFile(__dirname + "/about.html")
+    response.sendFile(__dirname + "/app3/about.html")
 });
-app.get("*",function(request, response, next){ 
-    let size=Math.round(Math.random()*15)+5
+app.get("*",function(request, response){ 
+    let size=Math.round(Math.random()*20)+5
     response.send(`<h1 style="font-size:${size}">Not found</h1>`)
 }); 
 app.listen(3000)

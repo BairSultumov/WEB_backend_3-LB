@@ -16,7 +16,7 @@ app.get(function (request, response, next) {
 });
 
 app.get("/", function (request, response) {
-    response.sendFile(__dirname + "/index.html")
+    response.sendFile(__dirname + "/app4/index.html")
 });
 app.get("/data/:kol", function (request, response) {
     let str = "<style>div{display:inline-block; width:100px; height:100px; margin:5px;</style>"

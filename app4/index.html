@@ -7,14 +7,14 @@
 </head>
 
 <body>
-    <p>4 задание 3 лабораторной</p>
-    <input id="pole" type=number min=1 max="30">
-    <a id="b2" href="data">Запрос</a>
+    <input id="input" type=number min=1 max="30">
+    <a id="button" href="data">Запрос</a>
+    
     <script>
-        let b = document.getElementById("b2")
+        let b = document.getElementById("button")
         b.addEventListener("click", function () {
-            let p = document.getElementById("pole")
-            b.setAttribute("href", "data/" + p.value)
+            let input = document.getElementById("input")
+            b.setAttribute("href", "data/" + input.value)
         })
     </script>
 </body>
